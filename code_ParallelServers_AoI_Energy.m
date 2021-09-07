@@ -1,10 +1,19 @@
 function code_ParallelServers_AoI_Energy
 
 
+% uncomment the next line to generate Fig.3  
 %do_plot_Fig3_Fig4_Fig5(1000)
-do_plot_Fig3_Fig4_Fig5(1)
+
+% uncomment the next line to generate Fig.4 
+%do_plot_Fig3_Fig4_Fig5(1)
+
+% uncomment the next line to generate Fig.5 
 %do_plot_Fig3_Fig4_Fig5(0.1)
+
+% uncomment the next line to generate Fig.6 
 %do_plot_Fig6_Fig7(0.1)
+
+% uncomment the next line to generate Fig.7 
 %do_plot_Fig6_Fig7(0.45)
 
 end
