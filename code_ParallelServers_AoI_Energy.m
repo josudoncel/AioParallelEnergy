@@ -16,8 +16,35 @@ function code_ParallelServers_AoI_Energy
 % uncomment the next line to generate Fig.7 
 %do_plot_Fig6_Fig7(0.45)
 
+
+% uncomment the next line to generate Fig.8 
+%do_plot_Fig8
+
 end
 
+
+function do_plot_Fig8
+
+l=1;
+mu=1;
+a=1;
+v_p=.01:.01:0.99;
+ind=1;
+%p=0.1;
+for p=v_p
+    l=1; mu=1; r1(ind)=compute_aaoi_twoparallel(l*p,l*(1-p),a,mu);
+    l=1; mu=10; r2(ind)=compute_aaoi_twoparallel(l*p,l*(1-p),a,mu);
+    l=10; mu=1; r3(ind)=compute_aaoi_twoparallel(l*p,l*(1-p),a,mu);
+    l=10; mu=10; r4(ind)=compute_aaoi_twoparallel(l*p,l*(1-p),a,mu);
+    ind=ind+1;
+end
+figure; 
+hold on
+plot(v_p,r1)
+plot(v_p,r2)
+plot(v_p,r3)
+plot(v_p,r4)
+end
 
 function do_plot_Fig6_Fig7(p)
 
